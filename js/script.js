@@ -70,7 +70,6 @@ const renderPokemon = async (pokemon) => {
         pokemonTipo1.innerHTML = data['types']['0']['type']["name"];
         pokemonTipo2.innerHTML = data['types']['1']['type']["name"];
 
-
         
         searchPokemon = data.id;
     } else {
