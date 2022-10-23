@@ -33,13 +33,13 @@ const renderPokemon = async (pokemon) => {
     pokemonName.innerHTML = 'carregando...';
     pokemonNumber.innerHTML = '';
     pokemonImage.src = 'image/loading.png ';
-    pokemonTipo1.innerHTML = '???';
-    pokemonTipo2.innerHTML = '???';
+    pokemonTipo1.innerHTML = '----';
+    pokemonTipo2.innerHTML = '----';
     pokemonHp.innerHTML = 'Hp: ???';
     pokemonAtk.innerHTML = 'Ataque: ???';
     pokemonDef.innerHTML = 'Defesa: ???';
-    pokemonSp_Atk.innerHTML = 'Sp. Ataque: ???';
-    pokemonSp_Def.innerHTML = 'Sp. Defesa: ???';
+    pokemonSp_Atk.innerHTML = 'Ataque esp: ???';
+    pokemonSp_Def.innerHTML = 'Defesa esp: ???';
     pokemonVel.innerHTML = 'Velocidade: ???';
     pokemonPeso.innerHTML = 'Peso: ???';
     pokemonAltura.innerHTML = 'Altura: ???';
@@ -47,23 +47,30 @@ const renderPokemon = async (pokemon) => {
     const data = await fetchPokemon(pokemon);
     
     if (data) {
+        let cal1 = (data['weight'] * 10) / 100 + 'kg';
+        let cal2 = (data['height'] * 10) / 100 + 'm';
+
         input.value = '';
         pokemonImage.style.display = 'block';
         pokemonName.innerHTML = data.species.name;
         pokemonNumber.innerHTML = "#" + data.id;
         pokemonImage.src = data['sprites']['other']['official-artwork']['front_default'];
 
-        pokemonTipo1.innerHTML = data['types']['0']['type']["name"];
-        pokemonTipo2.innerHTML = data['types']['1']['type']["name"];
-
         pokemonHp.innerHTML = 'Hp: ' + data['stats']['0']['base_stat'];
         pokemonAtk.innerHTML = 'Ataque: ' + data['stats']['1']['base_stat'];
         pokemonDef.innerHTML = 'Defesa: ' + data['stats']['2']['base_stat'];
         pokemonVel.innerHTML = 'Velocidade: ' + data['stats']['5']['base_stat'];
-        pokemonPeso.innerHTML = 'Peso: ' + data['weight'] + '0g';
-        pokemonAltura.innerHTML = 'Altura: ' + data['height'] + '0cm';
-        pokemonSp_Atk.innerHTML = 'Sp. Ataque: ' + data['stats']['3']['base_stat'];
-        pokemonSp_Def.innerHTML = 'Sp. Defesa: ' + data['stats']['4']['base_stat'];
+
+        pokemonPeso.innerHTML = 'Peso: ' + cal1;
+        pokemonAltura.innerHTML = 'Altura: ' + cal2;
+
+        pokemonSp_Atk.innerHTML = 'Ataque esp: ' + data['stats']['3']['base_stat'];
+        pokemonSp_Def.innerHTML = 'Defesa esp: ' + data['stats']['4']['base_stat'];
+
+        pokemonTipo1.innerHTML = data['types']['0']['type']["name"];
+        pokemonTipo2.innerHTML = data['types']['1']['type']["name"];
+
+
         
         searchPokemon = data.id;
     } else {
@@ -76,8 +83,8 @@ const renderPokemon = async (pokemon) => {
         pokemonHp.innerHTML = 'Hp: ???';
         pokemonAtk.innerHTML = 'Ataque: ???';
         pokemonDef.innerHTML = 'Defesa: ???';
-        pokemonSp_Atk.innerHTML = 'Sp. Ataque: ???';
-        pokemonSp_Def.innerHTML = 'Sp. Defesa: ???';
+        pokemonSp_Atk.innerHTML = 'Ataque esp: ???';
+        pokemonSp_Def.innerHTML = 'Defesa esp: ???';
         pokemonVel.innerHTML = 'Velocidade: ???';
         pokemonPeso.innerHTML = 'Peso: ???';
         pokemonAltura.innerHTML = 'Altura: ???';

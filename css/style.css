@@ -27,8 +27,8 @@ main {
 
 .pokemon_image {
     position: absolute;
-    left: 10%;
-    top: 12%;
+    left: 11%;
+    top: 14%;
     transform: translate(5%, 20%);
     height: 25%;
 }
@@ -111,7 +111,7 @@ li {
     width: 15%;
     padding: 4%;
     font-weight: 700;
-    border-radius: 50%;
+    border-radius: 15%;
     font-size: clamp(2px, 3vw, 1rem);
 }
 
