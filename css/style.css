@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+}
+
+body {
+    text-align: center;
+    background: linear-gradient(to bottom, rgb(136, 136, 255), #fff);
+    min-height: 100vh;
+}
+
+main {
+    display: inline-block;
+    padding: 15px;
+    margin-top: 2%;
+    position: relative;
+}
+
+.pokedex {
+    width: 100%;
+    max-width: 425px;
+}
+
+.pokemon_image {
+    position: absolute;
+    left: 10%;
+    top: 12%;
+    transform: translate(5%, 20%);
+    height: 25%;
+}
+
+.pokemon_data {
+    position: absolute;
+    color: rgb(89, 80, 80);
+    bottom: 37%;
+    left: 14%;
+    font-weight: 700;
+    font-size: clamp(1px, 4vw, 25px);
+    text-align: justify;
+}
+
+.pokemon_name {
+    color: rgb(89, 80, 80);
+    text-transform: capitalize;
+}
+
+.form {
+    position: absolute;
+    top: 8%;
+    left: 15%;
+    width: 65%;
+    border-bottom: 2px solid #6994c5;
+}
+
+.input_search {
+    width: 100%;
+    padding: 3%;
+    outline: none;
+    font-size: clamp(2px, 5vw, 1rem);
+}
+
+.pokemon_type {
+    position: absolute;
+
+}
+
+li {
+    list-style: none; 
+    color: rgb(89, 80, 80);
+    margin: 6% 0 0 0;
+}
+
+.info {
+    position: absolute;
+    right: 20%;
+    top: 18%;
+    text-align: initial;
+    text-transform: capitalize;
+    font-size: clamp(2px, 2.3vw, .9rem);
+}
+
+.list {
+    color: black;
+    font-weight: 600;
+}
+
+#tipo {
+    font-size: clamp(2px, 3vw, 1.2rem);
+}
+
+#base {
+    margin: 35% 0 15% 0 ;
+    font-size: clamp(2px, 3vw, 1.2rem);
+}
+
+.buttons {
+    position: absolute;
+    bottom: 14%;
+    display: flex;
+    width: 65%;
+    right: 19%;
+    gap: 70%;
+    /* background-color: red; */
+}
+
+.button {
+    width: 15%;
+    padding: 4%;
+    font-weight: 700;
+    border-radius: 50%;
+    font-size: clamp(2px, 3vw, 1rem);
+}
+
+.button:active {
+    background-color: #c0c0c0;
+    font-size: .8rem;
+}
+
+.contato {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 0 0 0 2%;
+}
+
+.contato1 {
+    display: flex;
+    gap: 3%;
+}
