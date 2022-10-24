@@ -49,6 +49,8 @@ const renderPokemon = async (pokemon) => {
     if (data) {
         let cal1 = (data['weight'] * 10) / 100 + 'kg';
         let cal2 = (data['height'] * 10) / 100 + 'm';
+       
+        searchPokemon = data.id;
 
         input.value = '';
         pokemonImage.style.display = 'block';
@@ -71,7 +73,7 @@ const renderPokemon = async (pokemon) => {
         pokemonTipo2.innerHTML = data['types']['1']['type']["name"];
 
         
-        searchPokemon = data.id;
+        
     } else {
         input.value = '';
         pokemonImage.src = './image/erro.png';
