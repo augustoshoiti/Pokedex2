@@ -63,10 +63,24 @@ main {
     font-size: clamp(2px, 5vw, 1rem);
 }
 
-.pokemon_type {
-    position: absolute;
-
+/* #tipo1 {
+    padding: 2%;
+    padding-bottom: 0;
+    width: fit-content;
+    border-radius: 10%;
+    color: black;
+    font-weight: 500;
 }
+
+#tipo2 {
+    padding: 2%;
+    padding-bottom: 0;
+    width: fit-content;
+    border-radius: 10%;
+    color: black;
+    font-weight: 500;
+} */
+
 
 li {
     list-style: none; 
@@ -80,12 +94,13 @@ li {
     top: 18%;
     text-align: initial;
     text-transform: capitalize;
-    font-size: clamp(2px, 2.3vw, .9rem);
+    font-size: clamp(2px, 3vw, .9rem);
 }
 
 .list {
     color: black;
     font-weight: 600;
+    
 }
 
 #tipo {
