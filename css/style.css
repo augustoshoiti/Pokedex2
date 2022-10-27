@@ -63,24 +63,6 @@ main {
     font-size: clamp(2px, 5vw, 1rem);
 }
 
-/* #tipo1 {
-    padding: 2%;
-    padding-bottom: 0;
-    width: fit-content;
-    border-radius: 10%;
-    color: black;
-    font-weight: 500;
-}
-
-#tipo2 {
-    padding: 2%;
-    padding-bottom: 0;
-    width: fit-content;
-    border-radius: 10%;
-    color: black;
-    font-weight: 500;
-} */
-
 
 li {
     list-style: none; 
@@ -119,7 +101,6 @@ li {
     width: 65%;
     right: 19%;
     gap: 70%;
-    /* background-color: red; */
 }
 
 .button {
