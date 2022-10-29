@@ -41,10 +41,6 @@ main {
     font-weight: 700;
     font-size: clamp(1px, 4vw, 25px);
     text-align: justify;
-}
-
-.pokemon_name {
-    color: rgb(89, 80, 80);
     text-transform: capitalize;
 }
 
