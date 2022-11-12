@@ -31,6 +31,7 @@ main {
     top: 14%;
     transform: translate(5%, 20%);
     height: 25%;
+    transition: scale .2s;
 }
 
 .pokemon_data {
@@ -62,7 +63,7 @@ main {
 .style_list {
     list-style: none; 
     color: rgb(89, 80, 80);
-    margin: 6% 0 0 0;
+    margin-top: 6%;
 }
 
 .info {
@@ -99,5 +100,13 @@ main {
 
 .button:active {
     background-color: #c0c0c0;
-    font-size: .8rem;
+    scale: .8;
+}
+
+.button:hover {
+    border: rgb(161, 159, 159) solid 1px;
+}
+
+.pokemon_image:hover {
+    scale: 1.35;
 }

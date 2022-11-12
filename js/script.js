@@ -28,7 +28,6 @@ const fetchPokemon = async (pokemon) => {
         return data;
     }
 }
-
 const renderPokemon = async (pokemon) => {
     pokemonName.innerHTML = 'carregando...';
     pokemonNumber.innerHTML = '';
@@ -70,9 +69,7 @@ const renderPokemon = async (pokemon) => {
 
         pokemonTipo1.innerHTML = data['types']['0']['type']["name"];
         pokemonTipo2.innerHTML = data['types']['1']['type']["name"];
-
-        
-        
+         
     } else {
         input.value = '';
         pokemonImage.src = './image/erro.png';
@@ -90,6 +87,9 @@ const renderPokemon = async (pokemon) => {
         pokemonAltura.innerHTML = 'Altura: ???';
     }
 }
+
+
+
 
 form.addEventListener('submit' , (event) => {
     event.preventDefault();
@@ -110,3 +110,4 @@ buttonNext.addEventListener('click' , () => {
 });
 
 renderPokemon(searchPokemon);
+typePokemon(searchPokemon);
